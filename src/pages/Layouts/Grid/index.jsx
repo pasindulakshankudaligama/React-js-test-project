@@ -28,7 +28,7 @@ class GridLayout extends Component {
                <Grid container spacing={0.5}>
                <Grid item lg={6} md={6} sm={6} xm={6}>
                <Typography variant="body2">Customer Name</Typography>
-               <TextField id="outlined basic" placeholder="name" label="Customer name" variant="outlined" size="small" style={{width:'100%'}}/>
+               <TextField id="outlined basic" placeholder="Customer name" label="Customer name" variant="outlined" size="small" style={{width:'100%'}}/>
                </Grid>
                    <Grid item lg={6} md={6} sm={6} xm={6}>
                        <Typography variant="body2">Gender</Typography>
