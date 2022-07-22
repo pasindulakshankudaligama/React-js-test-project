@@ -7,6 +7,7 @@ import GDSEButton from "../../components/common/Button";
 import {TextValidator, ValidatorForm} from 'react-material-ui-form-validator';
 import PostService from "../../services/PostService";
 import GDSESnackBar from "../../components/common/SnackBar";
+import Json from "qs";
 
 class Posts extends Component {
     constructor(props) {
@@ -22,6 +23,21 @@ class Posts extends Component {
             message: '',
             severity: ''
         }
+    }
+    async loadData() {
+        let res = await PostService.fetchPosts()
+        if (res.status == 200) {
+            console.log("res: " + Json.stringify(res))
+        }else{
+            console.log("fetching error" +Json.stringify(res))
+        }
+    }
+    componentDidMount() {
+        this.loadData();
+        console.log("Post screen mounted")
+    }
+    componentWillUnmount() {
+        console.log("Post screen unmounted")
     }
 
     handleSubmit = async () => {
