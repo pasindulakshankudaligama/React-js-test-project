@@ -10,14 +10,42 @@ class HomePage extends Component {
 
 
     render() {
+        const {classes} = this.props;
         return (
-            <Fragment>
-                <Greeting name="Pasindu"/>
-                <Divider light/>
-                <Countable/>
-            </Fragment>
+          <div className={classes.container}>
+            <div className={classes.subContainer}>
+              <Link className={classes.link} to={"/login"}>
+                <Button variant="contained" size="large">
+                  Login
+                </Button>
+              </Link>
 
-        )
+              <Link className={classes.link} to={"/dashboard"}>
+                <Button variant="contained" size="large">
+                  Dashboard
+                </Button>
+              </Link>
+
+              <Link className={classes.link} to={"/item"}>
+                <Button variant="contained" size="large">
+                  Item
+                </Button>
+              </Link>
+
+              <Link className={classes.link} to={"/post"}>
+                <Button variant="contained" size="large">
+                  Post
+                </Button>
+              </Link>
+
+              <Link className={classes.link} to={"/*"}>
+                <Button variant="contained" size="large">
+                  Not Found
+                </Button>
+              </Link>
+            </div>
+          </div>
+        );
     }
 }
 
