@@ -26,6 +26,12 @@ class HomePage extends Component {
                 </Button>
               </Link>
 
+              <Link className={classes.link} to={"/customer"}>
+                <Button variant="contained" size="large">
+                  Customer
+                </Button>
+              </Link>
+
               <Link className={classes.link} to={"/item"}>
                 <Button variant="contained" size="large">
                   Item
